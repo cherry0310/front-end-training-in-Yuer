@@ -8,13 +8,13 @@
  **标签**：使用小写标签，标签必须是闭合标签，有开始有结束；  
  **属性**: `<h1 align="center">` `<body bgcolor="yellow">`   
 ####（2）css：表现层
-CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明  
+1）CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明  
 **元素**：p{属性:值;属性:值;}  
 **类**：.calssname{属性:值;属性:值;}  
 **id**：#idname{属性:值;属性:值;}唯一性  
 属性：width\height\margin\padding\backgroung\float  
 **样式的引入方式：**  
-权重：  
+2）权重：  
 1、浏览器缺省设置  
 2、外部样式表  
 ```html
@@ -22,7 +22,13 @@ CSS 规则由两个主要的部分构成：选择器，以及一条或多条声�
 <link rel="stylesheet" type="text/css" href="mystyle.css" />
 </head>
 ```
-3、内部样式表（位于 ``<head>`` 标签内部）
-4、内联样式（在HTML元素内部）
+3、内部样式表（位于 ``<head>`` 标签内部）  
+4、内联样式（在HTML元素内部）  
+3）定位：relative，absolute，fixed；  
+4）**块级元素和行内元素：**  
+-块级元素可以设置width、height属性，行内元素设置width、height属性无效。
+-块级元素可以设置margin和padding属性。行内元素设置margin和padding的水平方向，即-left和-right有效，垂直方向的-top和-bottom无效。
+-通过修改display属性来切换块级元素和行内元素。
+
 
 

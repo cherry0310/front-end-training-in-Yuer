@@ -4,8 +4,8 @@
 ###1.入门培训
 ####（1）html：结构层：
 **元素**：指的是从开始标签（start tag）到结束标签（end tag）的所有代码；
-    <html><body><p><h1><table><a><br />
-**表格**：table；列表：ul,dl；块：div
+    `<html><body><p><h1><table><a><br />`
+**表格**：`table`；列表：`ul,dl`；块：`div`
 **标签**：使用小写标签，标签必须是闭合标签，有开始有结束；
-**属性**: <h1 align="center">
-          <body bgcolor="yellow">
+**属性**: `<h1 align="center">`
+          `<body bgcolor="yellow">`

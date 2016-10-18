@@ -29,11 +29,11 @@ d.内联样式（在HTML元素内部）
 - 块级元素可以设置width、height属性，行内元素设置width、height属性无效。
 - 块级元素可以设置margin和padding属性。行内元素设置margin和padding的水平方向，即-left和-right有效，垂直方向的-top和-bottom无效。
 - 通过修改display属性来切换块级元素和行内元素。  
-#### （3）Photoshop的基本使用  
+####（3）Photoshop的基本使用  
 取色、测量、切片、保存，字体大小是12、14、16.  
-#### （4）web前端书写规范
----
-### 2.练习+讲解
+####（4）web前端书写规范
+***
+###2.练习+讲解
 
 
 

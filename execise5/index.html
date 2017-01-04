@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>H5表单练习_曹燕</title>
+<style type="text/css">
+body{padding:0;margin:0;font-size:14px;font-family:Arial;}
+h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+dl,dt,dd,ul,li,ol{list-style:none;}
+*{border:0;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+table{border-collapse:collapse;border-spacing:0;}
+body{width:100%;height:500px;color:#444444;background-color:#eee;}
+table{width:100%;background-color:#fff;}
+caption{font-size:16px;font-weight:bold;margin-bottom:10px;background-color:#ee3674;color:#fff;height:30px;line-height:30px;}
+tr{border-bottom:1px solid #e7e7e7;height:40px;line-height:30px;font-size:13px;}
+th{width:90px;font-weight:normal;text-align:left;color:#434343;padding-left:10px;}
+td{text-align:right;padding-right:10px;}
+a{text-decoration:none;color:#5587ba;height:40px;}
+select{color:#5587ba;-webkit-appearance:none;}
+input{color:#5587ba;text-align:right;}
+.text{padding-right:14px;}
+.fill_btn{width:60%;height:36px;background-color:#ee3674;color:#fff;font-size:13px;margin-left:20%;margin-right:20%;margin-top:17px;border-radius:8px;text-align:center;}
+span{background:url(images/icon.gif) no-repeat center right;background-size:11px 19px;padding-right:14px;}
+</style>
+</head>
+<body>
+<form action="" method="post">
+	<table>
+		<caption>填写投保人信息</caption>
+		<tr>
+			<th>您的姓名</th>
+			<td><input type="text" class="text" name="user_name" required="required" placeholder="请输入姓名" /></td>
+		</tr>
+		<tr>
+			<th>证件类型</th>
+			<td>
+				<span>
+					<select name="certificates">
+						<option value="type1">身份证</option>
+						<option value="type3">结婚证</option>
+						<option value="type4">驾驶证</option>
+					</select>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<th>证件号码</th>
+			<td><input type="text" class="text" name="user_number" required="required" placeholder="请输入证件号" /></td>
+		</tr>
+		<tr>
+			<th>出生日期</th>
+			<td><span><input type="date" name="user_birthday" required="required" value="1985-08-06" /></span></td>
+		</tr>
+		<tr>
+			<th>性别</th>
+			<td>
+				<span>
+					<select name="gender">
+						<option value="type1">男</option>
+						<option value="type2">女</option>
+					</select>
+				</span>				
+			</td>
+		</tr>
+		<tr>
+			<th>当前居住地</th>
+			<td><span><input type="text" name="user_addr" required="required" value="江苏省南京市"/></span></td>
+		</tr>
+		<tr>
+			<th>手机</th>
+			<td><input type="text" class="text" name="user_phone" required="required" placeholder="请输入号码" pattern="[0-9]{11}"/></td>
+		</tr>
+		<tr>
+			<th>邮箱</th>
+			<td><input type="email" class="text" name="user_email" required="required" placeholder="请输入邮箱" /></td>
+		</tr>	
+	</table>
+	<input type="submit" value="填写投保人信息" class="fill_btn"/>
+</form>
+</body>
+</html>

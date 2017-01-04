@@ -1,0 +1,182 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>礼盒_曹燕</title>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+<style type="text/css">
+body{padding:0;margin:0;font-size:14px;font-family:Arial;}
+h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+dl,dt,dd,ul,li,ol{list-style:none;}
+*{border:0;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+table{border-collapse:collapse;border-spacing:0;}
+ul,li{list-style:none;}
+body{width:100%;min-height:480px;}
+.main_top{width:100%;height:324px;background:url(images/bg.png) no-repeat;background-size:100% 100%;padding-top:36px;}
+p{font-size:21px;color:#fff;text-align:center;}
+.main_bottom{padding-left:15px;padding-right:15px;padding-top:18px;}
+button{-webkit-appearance:none;width:136px;height:42px;line-height:40px;color:#fff;font-size:17px;border-radius:10px;box-shadow: 0 0 8px #b4b2b2;}
+.button_grey{background-color:#969494;float:left;}
+.button_pink{background-color:#ff2477;float:right;}
+.box{width:210px;height:210px;margin-left:auto;margin-right:auto;padding-top:32px;overflow:hidden;}
+.img_list{width:1280px;height:210px;}
+.img_list img{width:210px;height:210px;}
+.dot_list{width:210px;height:20px;margin-left:auto;margin-right:auto;height:30px;}
+.dot_list li{width:40px;float:left;color:#fff;cursor:pointer;text-align:center;font-size:22px;}
+.dot_list .on{ color:red;}
+</style>
+
+<script type="text/javascript">
+//touches
+function touches(obj,direction,fun){
+//obj:ID对象
+//direction:swipeleft,swiperight,swipetop,swipedown,singleTap,touchstart,touchmove,touchend
+//           划左，     划右，     划上，     划下，     点击，    开始触摸，   触摸移动， 触摸结束
+//fun:回调函数
+var defaults={x:5,y:5,ox:0,oy:0,nx:0,ny:0};
+direction=direction.toLowerCase();
+//配置：划的范围在5X5像素内当点击处理
+obj.addEventListener("touchstart",function() {
+	defaults.ox=event.targetTouches[0].pageX;
+	defaults.oy=event.targetTouches[0].pageY;
+	defaults.nx=defaults.ox;
+	defaults.ny=defaults.oy;
+	if(direction.indexOf("touchstart")!=-1)fun();
+}, false);
+obj.addEventListener("touchmove",function() {
+	event.preventDefault();
+	defaults.nx=event.targetTouches[0].pageX;
+	defaults.ny=event.targetTouches[0].pageY;
+	if(direction.indexOf("touchmove")!=-1)fun();
+}, false);
+obj.addEventListener("touchend",function() {
+	var changeY=defaults.oy - defaults.ny;
+	var changeX=defaults.ox - defaults.nx;
+	if(Math.abs(changeX)>Math.abs(changeY)&&Math.abs(changeY)>defaults.y){
+		//左右事件
+		if(changeX > 0) {
+			if(direction.indexOf("swipeleft")!=-1)fun();
+		}else{
+			if(direction.indexOf("swiperight")!=-1)fun();
+		}
+	}else if(Math.abs(changeY)>Math.abs(changeX)&&Math.abs(changeX)>defaults.x){
+		//上下事件
+		if(changeY > 0) {
+			if(direction.indexOf("swipetop")!=-1)fun();
+		}else{
+			if(direction.indexOf("swipedown")!=-1)fun();
+		}
+	}else{
+		//点击事件
+		if(direction.indexOf("singleTap")!=-1)fun();
+	}
+	if(direction.indexOf("touchend")!=-1)fun();
+}, false);
+}
+//setDotStyle
+function setDotStyle(index){
+	var dot_list=document.getElementById("dot_list").getElementsByTagName("li");
+	for(var i=0;i<5;i++){
+		if(i!=index){
+			dot_list[i].className="";
+		}else{
+			dot_list[i].className="on";
+		}
+	}
+}
+//slide
+function slide(){
+	var flag=0;	
+	//自动轮播效果
+	var itv=setInterval(function(){						
+		if(flag!=4){
+			flag++;
+			$(".img_list").animate({marginLeft:-214*flag+"px"});
+			setDotStyle(flag);
+		}else{										
+			$(".img_list").css("marginLeft","0px");
+			setDotStyle(0);
+			flag=0;				
+		}	       
+				
+	},2500);
+	//swipeleft
+	touches(document.getElementById("img_list"),"swipeleft",function(){
+		clearInterval(itv);
+		$(".img_list").animate({marginLeft:-214*flag+"px"});	
+		if(flag==4){
+			//alert("end");
+			flag=0;
+			$(".img_list").animate({marginLeft:"0px"});	
+		}else{
+			//alert("forward");	
+			flag=flag+1;
+			$(".img_list").animate({marginLeft:-214*flag+"px"});
+		}
+		setDotStyle(flag);			
+		itv=setInterval(function(){					
+			if(flag!=4){
+				flag++;
+			}else{
+				flag=0;
+			}
+			$(".img_list").animate({marginLeft:-214*flag+"px"});        
+			setDotStyle(flag);
+		},2500);		
+		
+	});
+	//swiperight
+	touches(document.getElementById("img_list"),"swiperight",function(){
+		clearInterval(itv);		
+		if(flag==0){
+			//alert("start");
+			flag=4;
+			$(".img_list").animate({marginLeft:"-856px"});
+		}else{
+			//alert("back");	
+			flag=flag-1;
+			$(".img_list").animate({marginLeft:-214*flag+"px"});
+		}
+		setDotStyle(flag);	
+		itv=setInterval(function(){
+			if(flag!=4){
+				flag++;
+			}else{
+				flag=0;
+			}
+			$(".img_list").animate({marginLeft:-214*flag+"px"});        
+			setDotStyle(flag);		
+		},2500);	
+	});	
+}
+window.onload=slide;
+</script>
+</head>
+<body>
+<div class="main_top">
+	<p>选择一个你心仪的盒子</p>	
+	<div class="box">
+		<div class="img_list" id="img_list">
+			<img src="images/box1.png" alt="box1" />
+			<img src="images/box2.png" alt="box2" />
+			<img src="images/box3.png" alt="box3" />
+			<img src="images/box4.png" alt="box4" />
+			<img src="images/box5.png" alt="box5" />
+		</div>	
+	</div>
+	<ul class="dot_list" id="dot_list">
+		<li class="on">●</li>
+		<li>●</li>
+		<li>●</li>
+		<li>●</li>
+		<li>●</li>
+	</ul>	
+</div><!--main_top-->
+<div class="main_bottom">
+	<button class="button_grey">就选他了</button>
+	<button class="button_pink">就选他了</button>
+</div><!--main_bottom-->
+</body>
+</html>

@@ -1,0 +1,184 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文字处理练习_曹燕</title>
+<style type="text/css">
+*{margin:0;padding:0;}
+body{font:12px \5b8b\4f53,sans-serif;}
+body{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+ul,li{list-style:none;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+img{border:0;}
+a{text-decoration:none;color:#3c3c3c;}
+a:hover{color:#e60012;}
+.main{width:470px;height:340px;margin:20px auto;overflow:hidden;}
+.nav{width:468px;height:25px;overflow:hidden;border-top:1px solid #b1c8d6;border-left:1px solid #b1c8d6;}
+.nav li{float:left;width:116px;height:24px;line-height:22px;text-align:center;cursor:pointer;font-size:14px;color:#1e51a2;background:url(images/unhover_background.gif);border-right:1px solid #b1c8d6;border-bottom:1px solid #b1c8d6;}
+.nav .hover{background:url(images/hover_background.gif) repeat;font-weight:bold;border-bottom:1px solid #fff;}
+.main_body{width:467PX;height:312px;overflow:hidden;border-left:1px solid #b1c8d6;border-bottom:1px solid #b1c8d6;border-right:1px solid #b1c8d6;}
+.body_left{float:left;width:126PX;height:312px;padding-left:12px;}
+.body_right{float:left;width:323PX;height:312px;padding-left:6px;}
+.left_top{width:120px;height:90px;border:1px solid #dcdddf;margin-top:12px;margin-bottom:8px;display:block;}
+.left_middle{display:block;width:122px;height:14px;font-size:12px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.left_bottom{width:114px;height:158px;border:1px solid #ededed;background:#f5f8fd;margin-top:12px;padding-left:6px;padding-top:4px;}
+.left_bottom li{line-height:20px;font-size:12px;color:#585856;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.left_bottom .bottom_a{margin-top:4px;border-top:1px dotted #cbccd0;padding-top:6px;}
+.left_bottom .icon{padding-left:12px;background:url(images/icon.gif) 0 5px no-repeat;}
+h3{margin-top:12px;margin-bottom:3px;display:block;color:#2c2c2c;font-size:16px;font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.right_middle{width:320px;}
+.right_middle li{padding-left:8px;line-height:26px;color:#2c2c2c;font-size:14px;background:url(images/icon.gif) 0 -29px no-repeat;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.right_middle a{margin-right:6px;}
+.right_bottom{width:312px;border-top:1px dotted #cbcbcb;padding-top:1px;margin-top:4px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+</style>
+<script>
+var flag=1;
+function changeTab(id){	
+	if(id!=flag){
+		document.getElementById("main_body"+id).style.display="block";
+		for(var i=1;i<=4;i++){
+			if(i!=id){
+				document.getElementById("main_body"+i).style.display="none";
+			}
+		}
+		document.getElementById("li_"+id).className="hover";
+		for(var i=1;i<=4;i++){
+			if(i!=id){
+				document.getElementById("li_"+i).className="";
+			}
+		}
+		flag=id;
+	}
+}
+</script>
+</head>
+<body>
+<div class="main">	
+	<ul class="nav">
+		<li class="hover" onmouseover="changeTab(1)" id="li_1">科技</li>
+		<li onmouseover="changeTab(2)" id="li_2">手机</li>
+		<li onmouseover="changeTab(3)" id="li_3">数码·家电</li>
+		<li onmouseover="changeTab(4)" id="li_4">3G</li>
+	</ul><!--/nav-->	
+	<div id="main_body1" class="main_body">
+		<div class="body_left">
+			<a href="#" class="left_top"><img src="images/image1.gif" alt="image1" /></a>
+			<a href="#" class="left_middle">行水差价够买M9手机荐</a>
+			<ul class="left_bottom">
+				<li class="icon"><a href="#">独家专栏</a></li>
+				<li><a href="#">户外媒体的泡沫</a></li>
+				<li class="icon"><a href="#">每日一站</a></li>
+				<li><a href="#">OpenInvo创意交易</a></li>
+				<li class="icon"><a href="#">中国概念股</a></li>
+				<li><a href="#">华氏传媒起诉DMG</a></li>
+				<li class="bottom_a"><a href="#">撕掉国产IT遮羞布</a></li>
+			</ul>			
+		</div><!--/body_left-->
+		<div class="body_right">
+			<h3><a href="#">联通推3G无线猫：可将3G网络转为WiFi1</a></h3>	
+			<ul class="right_middle">
+				<li><a href="#">摩托罗拉与诺西并购案推迟</a><a href="#">遭中国反垄断审查</a></li>
+				<li><a href="#">“国家队”银联招兵买马进入网上支付</a><a href="#">推B2C商城</a></li>
+				<li><a href="#">黄系人马邹晓春进入美董事会十日尚未履新</a></li>
+				<li><a href="#">网络电视支付标准将出台</a><a href="#">或将POS机植入遥控器</a></li>
+				<li><a href="#">E-link电子书价格明年将普降</a><a href="#">彩屏电子书3月上市</a></li>
+				<li class="right_bottom"><a href="#">[数码]</a><a href="#">史上最薄的小黑</a><a href="#">商务旗舰T410s视觉评测</a></li>
+				<li><a href="#">[数码]</a><a href="#">赠送42寸液晶？</a><a href="#">元旦四大促销冰箱大盘点</a></li>
+				<li><a href="#">[手机]</a><a href="#">最低只要999元</a><a href="#">8款比M9性价更高强机荐</a></li>
+				<li><a href="#">[手机]</a><a href="#">诺基亚手机192元</a><a href="#">年度网购TOP100排行榜</a></li>
+				<li><a href="#">[论坛]</a><a href="#">年终活动送iTouch!</a><a href="#">2010年IT界十大意外</a></li>
+			</ul><!--/right_middle-->
+		</div><!--/body_right-->
+		</div><!--/main_body-->
+	<div id="main_body2" class="main_body">
+		<div class="body_left">
+			<a href="#" class="left_top"><img src="images/image1.gif" alt="image1" /></a>
+			<a href="#" class="left_middle">行水差价够买M9手机荐</a>	
+			<ul class="left_bottom">
+				<li class="icon"><a href="#">独家专栏</a></li>
+				<li><a href="#">户外媒体的泡沫</a></li>
+				<li class="icon"><a href="#">每日一站</a></li>
+				<li><a href="#">OpenInvo创意交易</a></li>
+				<li class="icon"><a href="#">中国概念股</a></li>
+				<li><a href="#">华氏传媒起诉DMG</a></li>
+				<li class="bottom_a"><a href="#">撕掉国产IT遮羞布</a></li>
+			</ul>			
+		</div><!--/body_left-->
+		<div class="body_right">
+			<h3><a href="#">联通推3G无线猫：可将3G网络转为WiFi2</a></h3>	
+			<ul class="right_middle">
+				<li><a href="#">摩托罗拉与诺西并购案推迟</a><a href="#">遭中国反垄断审查</a></li>
+				<li><a href="#">“国家队”银联招兵买马进入网上支付</a><a href="#">推B2C商城</a></li>
+				<li><a href="#">黄系人马邹晓春进入美董事会十日尚未履新</a></li>
+				<li><a href="#">网络电视支付标准将出台</a><a href="#">或将POS机植入遥控器</a></li>
+				<li><a href="#">E-link电子书价格明年将普降</a><a href="#">彩屏电子书3月上市</a></li>
+				<li class="right_bottom"><a href="#">[数码]</a><a href="#">史上最薄的小黑</a><a href="#">商务旗舰T410s视觉评测</a></li>
+				<li><a href="#">[数码]</a><a href="#">赠送42寸液晶？</a><a href="#">元旦四大促销冰箱大盘点</a></li>
+				<li><a href="#">[手机]</a><a href="#">最低只要999元</a><a href="#">8款比M9性价更高强机荐</a></li>
+				<li><a href="#">[手机]</a><a href="#">诺基亚手机192元</a><a href="#">年度网购TOP100排行榜</a></li>
+				<li><a href="#">[论坛]</a><a href="#">年终活动送iTouch!</a><a href="#">2010年IT界十大意外</a></li>
+			</ul><!--/right_middle-->
+		</div><!--/body_right-->
+	</div><!--/main_body-->
+	<div id="main_body3" class="main_body">
+		<div class="body_left">
+			<a href="#" class="left_top"><img src="images/image1.gif" alt="image1" /></a>
+			<a href="#" class="left_middle">行水差价够买M9手机荐</a>
+			<ul class="left_bottom">
+				<li class="icon"><a href="#">独家专栏</a></li>
+				<li><a href="#">户外媒体的泡沫</a></li>
+				<li class="icon"><a href="#">每日一站</a></li>
+				<li><a href="#">OpenInvo创意交易</a></li>
+				<li class="icon"><a href="#">中国概念股</a></li>
+				<li><a href="#">华氏传媒起诉DMG</a></li>
+				<li class="bottom_a"><a href="#">撕掉国产IT遮羞布</a></li>
+			</ul>
+		</div><!--/body_left-->
+		<div class="body_right">
+			<h3><a href="#">联通推3G无线猫：可将3G网络转为WiFi3</a></h3>	
+			<ul class="right_middle">
+				<li><a href="#">摩托罗拉与诺西并购案推迟</a><a href="#">遭中国反垄断审查</a></li>
+				<li><a href="#">“国家队”银联招兵买马进入网上支付</a><a href="#">推B2C商城</a></li>
+				<li><a href="#">黄系人马邹晓春进入美董事会十日尚未履新</a></li>
+				<li><a href="#">网络电视支付标准将出台</a><a href="#">或将POS机植入遥控器</a></li>
+				<li><a href="#">E-link电子书价格明年将普降</a><a href="#">彩屏电子书3月上市</a></li>
+				<li class="right_bottom"><a href="#">[数码]</a><a href="#">史上最薄的小黑</a><a href="#">商务旗舰T410s视觉评测</a></li>
+				<li><a href="#">[数码]</a><a href="#">赠送42寸液晶？</a><a href="#">元旦四大促销冰箱大盘点</a></li>
+				<li><a href="#">[手机]</a><a href="#">最低只要999元</a><a href="#">8款比M9性价更高强机荐</a></li>
+				<li><a href="#">[手机]</a><a href="#">诺基亚手机192元</a><a href="#">年度网购TOP100排行榜</a></li>
+				<li><a href="#">[论坛]</a><a href="#">年终活动送iTouch!</a><a href="#">2010年IT界十大意外</a></li>
+			</ul><!--/right_middle-->
+		</div><!--/body_right-->
+	</div><!--/main_body-->
+	<div id="main_body4" class="main_body">
+		<div class="body_left">
+			<a href="#" class="left_top"><img src="images/image1.gif" alt="image1" /></a>
+			<a href="#" class="left_middle">行水差价够买M9手机荐</a>
+			<ul class="left_bottom">
+				<li class="icon"><a href="#">独家专栏</a></li>
+				<li><a href="#">户外媒体的泡沫</a></li>
+				<li class="icon"><a href="#">每日一站</a></li>
+				<li><a href="#">OpenInvo创意交易</a></li>
+				<li class="icon"><a href="#">中国概念股</a></li>
+				<li><a href="#">华氏传媒起诉DMG</a></li>
+				<li class="bottom_a"><a href="#">撕掉国产IT遮羞布</a></li>
+			</ul>
+		</div><!--/body_left-->
+		<div class="body_right">
+			<h3><a href="#">联通推3G无线猫：可将3G网络转为WiFi4</a></h3>	
+			<ul class="right_middle">
+				<li><a href="#">摩托罗拉与诺西并购案推迟</a><a href="#">遭中国反垄断审查</a></li>
+				<li><a href="#">“国家队”银联招兵买马进入网上支付</a><a href="#">推B2C商城</a></li>
+				<li><a href="#">黄系人马邹晓春进入美董事会十日尚未履新</a></li>
+				<li><a href="#">网络电视支付标准将出台</a><a href="#">或将POS机植入遥控器</a></li>
+				<li><a href="#">E-link电子书价格明年将普降</a><a href="#">彩屏电子书3月上市</a></li>
+				<li class="right_bottom"><a href="#">[数码]</a><a href="#">史上最薄的小黑</a><a href="#">商务旗舰T410s视觉评测</a></li>
+				<li><a href="#">[数码]</a><a href="#">赠送42寸液晶？</a><a href="#">元旦四大促销冰箱大盘点</a></li>
+				<li><a href="#">[手机]</a><a href="#">最低只要999元</a><a href="#">8款比M9性价更高强机荐</a></li>
+				<li><a href="#">[手机]</a><a href="#">诺基亚手机192元</a><a href="#">年度网购TOP100排行榜</a></li>
+				<li><a href="#">[论坛]</a><a href="#">年终活动送iTouch!</a><a href="#">2010年IT界十大意外</a></li>
+			</ul><!--/right_middle-->
+		</div><!--/body_right-->
+	</div><!--/main_body-->
+</div>
+</body>
+</html>

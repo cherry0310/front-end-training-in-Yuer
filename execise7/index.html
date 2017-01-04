@@ -1,0 +1,211 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>往期访谈详情_曹燕</title>
+<style type="text/css">
+body{padding:0;margin:0;font-size:14px;font-family:Arial;}
+h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+dl,dt,dd,ul,li,ol{list-style:none;}
+*{border:0;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+table{border-collapse:collapse;border-spacing:0;}
+ul,li{list-style:none;}
+body{width:100%;}
+.main_top{padding:11px 20px 0px 20px;background-color:#fff;}/*main_top*/
+.main_top td{vertical-align:top;}
+.main_top h3{font-size:16px;color:#ff4e75;height:25px;line-height:25px;}
+.main_top .table_top{border-bottom:1px solid #dedede;margin-top:10px;margin-bottom:10px;}
+.main_top .td1{width:74px;}
+.main_top .td1 .desecription{width:74px;height:135px;background-color:#f0f0f0;padding:10px 8px 0px 8px;margin-bottom:15px;}
+.main_top .td1 .desecription img{width:74px;height:90px;}
+.main_top .td1 .desecription p{margin-top:11px;height:14px;line-height:14px;text-align:center;}
+.main_top .td2{font-size:12px;line-height:22px;padding-left:15px;}
+.main_top .td2 .hide{color:#ff5076;float:right;padding-right:8px;}
+.main_top .td2 .hide_before{background:url(images/up_icon.png) no-repeat center right;background-size:8px 8px;}
+.main_top .td2 .hide_after{background:url(images/down_icon.png) no-repeat center right;background-size:8px 8px;}
+.main_top .td2 .span_left{color:#999;}
+.main_top .td2 .span_right{color:#ff5076;}
+.main_top .td2 .p_toggle{display:none;}
+.main_top .td2 .p_bottom{margin-bottom:15px;}
+.main_top .p_middle{font-size:12px;line-height:22px;margin-bottom:15px;}
+.main_middle{padding:11px 20px 20px 20px;background-color:#f3f3f1;}/*main_middle*/
+.nav{width:100%;height:38px;font-size:16px;line-height:38px;display:-webkit-flex;display:flex;webkit-flex-flow:row nowrap;justify-content:center;}
+.nav li{color:#000;background-color:#f3f3f1;border:1px solid #ff5076;text-align:center;-webkit-flex:1;flex:1;}
+.nav li:nth-child(1){border-top-left-radius:10px;border-bottom-left-radius:10px;}
+.nav li:nth-child(2){border-left:0;border-right:0;}
+.nav li:nth-child(3){border-top-right-radius:10px;border-bottom-right-radius:10px;}
+.nav .selected{color:#fff;background-color:#ff5076;}
+.table_content{width:100%;margin-top:20px;}
+.table_content td{vertical-align:top;padding-bottom:20px;}
+.td_icon{width:50px;}
+.table_content p{padding:5px 15px;line-height:22px;}
+.td_white{background-color:#fff;border:1px solid #dedede;border-radius:10px;margin-left:8px;position:relative;}
+.td_white .p_top{color:#999;padding-bottom:0;}
+.td_white .p_top span{padding-left:10px;padding-right:5px;}
+.white_angle{position:absolute;left:-11px;top:10px;background:url(images/white_angle.png) no-repeat;background-size:11px 13px;width:11px;height:13px;}
+.td_pink{background-color:#ffe6ea;border:1px solid #ffb6c7;border-radius:10px;margin-left:8px;margin-right:8px;}
+.td_pink .p_top{color:#999;padding-bottom:0;}
+.td_pink .p_top span{padding-left:10px;padding-right:5px;}
+img{width:54px;height:54px;}
+button{width:100%;height:30px;background-color:#dcdcdc;-webkit-appearance:none;}
+button span{color:#999;padding-right:8px;}
+button .hide_content{background:url(images/up_icon2.png) no-repeat center right;background-size:8px 8px;}
+button .show_content{background:url(images/down_icon2.png) no-repeat center right;background-size:8px 8px;}
+.main_bottom{padding-left:20px;padding-right:20px;background-color:#fff;}/*main_bottom*/
+.main_bottom h3{font-size:16px;height:40px;line-height:40px;border-bottom:1px solid #dedede;}
+.main_bottom li{font-size:14px;height:40px;line-height:40px;border-top:1px solid #dedede;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;background:url(images/li_icon.png) no-repeat center left;background-size:6px 6px;padding-left:9px;}
+.main_bottom a{color:#000;}
+.main_footer{padding:17px 20px 15px 20px;background-color:#f3f3f1;text-align:center;}/*main_footer*/
+.main_footer,.main_footer a{color:#bebebe;}
+a{text-decoration:none;}
+a:hover{color:red;}
+.main_footer span{margin-left:5px;margin-right:5px;}
+.footer1{font-size:14px;height:30px;line-height:30px;}
+.footer2,.footer3{font-size:10px;height:20px;line-height:20px;}
+.a_middle{margin:0;}
+.a_middle a{color:#ff5076;}
+.a_middle a:hover{color:red;}
+</style>
+<script type="text/javascript">
+function changeIcon(){
+	var class_name=document.getElementById("show_all").className;
+	if(class_name=="hide hide_before"){
+		document.getElementById("p_toggle").style.display="block";
+		document.getElementById("show_all").className="hide hide_after";
+		document.getElementById("show_all").innerHTML="隐藏";
+	}else{
+		document.getElementById("p_toggle").style.display="none";
+		document.getElementById("show_all").className="hide hide_before";
+		document.getElementById("show_all").innerHTML="展开全部";
+	}
+}
+function changeNav(id){
+	document.getElementById("li"+id).style.backgroundColor="#ff5076";
+	document.getElementById("li"+id).style.color="#fff";
+	document.getElementById("table"+id).style.display="block";
+	for(var i=1;i<=3;i++){
+		if(i!=id){
+			document.getElementById("li"+i).style.backgroundColor="#f3f3f1";
+			document.getElementById("li"+i).style.color="#000";
+			document.getElementById("table"+i).style.display="none";
+			
+		}
+	}
+}
+function showMore(){
+	var class_name=document.getElementById("show_more").className;
+	if(class_name=="hide_content"){
+		document.getElementById("table_hide1").style.display="table";
+		document.getElementById("table_hide2").style.display="table";
+		document.getElementById("show_more").className="show_content";
+		document.getElementById("show_more").innerHTML="隐藏";
+	}else{
+		document.getElementById("table_hide1").style.display="none";
+		document.getElementById("table_hide2").style.display="none";
+		document.getElementById("show_more").className="hide_content";
+		document.getElementById("show_more").innerHTML="显示更多";
+	}
+}
+</script>
+</head>
+<body>
+	<div class="main_top">	
+		<h3>本期嘉宾</h3>
+		<table class="table_top">
+			<tr>
+				<td class="td1">
+					<div class="desecription">
+						<img src="images/doctor.jpg" />
+						<p>崔玉涛</p>
+					</div>
+				</td>
+				<td class="td2">
+					<p>崔玉涛，背景和睦家医院儿科主任。从医25年，是中国第一批从事新生儿急救的儿科权威。先后工作于首都医科大学附属北京儿童医院急救中心新生儿重症监护室和中美合资北京和睦家医院儿科，主要从事新生儿急救、婴儿生长发育监测、早期婴儿问题的干预和疾病的治疗等工作，对新生儿及婴幼儿医学领域有较为全面的了解和实践经验。每天坚持发微博普及育儿知识。是中国粉丝最多的儿科医生。雅安地震亲赴灾区参与医疗救护工作。著有《崔玉涛图解家庭育儿》系列图书。
+					<span class="hide hide_before" id="show_all" onclick="changeIcon();">展开全部</span></p>
+					<p class="p_toggle" id="p_toggle">崔玉涛医生中国医师协会儿童健康委员会专家，每年应邀参加美国儿科学会（aap），欧洲儿科胃肠、肝病、营养学会（espghan），亚洲儿科大会，美国过敏、免疫、哮喘学会，世界过敏学会等国际医学大会。</p>
+					<p class="p_bottom"><span class="span_left">访谈时间：</span><span class="span_right">2015-4-1(周三)15点-17点</span></p>
+				</td>
+			</tr>
+		</table><!--table_top-->
+		<h3>主题简介</h3>
+		<p class="p_middle">炎炎夏日，我们也许会冲个凉水澡，来杯冰饮，甚至会整天躲在空调房里避暑，但对于稚嫩的宝宝来说，清凉度夏该如何做？能不能吃冷饮？能不能睡凉席？睡觉盖什么合适？衣服穿多少合适？又该如何防蚊防痱...本期访谈，我们特邀儿科专家崔玉涛来为大家答疑解难，欢迎各位家长详细阐述您所遇到问题。且会从积极提问的网友中抽三位送小布叮早教故事机一台，五位送《崔玉涛图解家庭育儿》。</p>
+	</div><!--main_top-->
+	<div class="main_middle">
+		<ul class="nav">
+			<li class="selected" id="li1"  onclick="changeNav(1);">访谈实录</li>
+			<li id="li2" onclick="changeNav(2);">全部提问</li>
+			<li id="li3" onclick="changeNav(3);">我的提问</li>
+		</ul><!--nav-->	
+		<div id="table1">
+			<table class="table_content">
+				<tr>
+					<td class="td_icon"><img src="images/portriat1.png" /></td>
+					<td><div class="td_white"><div class="white_angle"></div><p class="p_top">心聆<span></span>2015-3-31<span></span>11:00</p><p>宝宝手背蚊子叮咬后有个大包，都肿起来了，怎么弄呀？</p></div></td>	
+				</tr>			
+			</table>
+			<table class="table_content">
+				<tr>
+					<td><div class="td_pink"><div class="pink_angle"></div><p class="p_top">崔玉涛<span></span>2015-3-31<span></span>11:05</p><p>可使用硼酸水温湿敷。如果奇痒，可涂上少许氢化可的松软膏。再有，也要注意局部感染。蚊虫叮咬后以痒为主；局部感染以疼为主。</p></div></td>
+					<td class="td_icon"><img src="images/portriat2.png" /></td>	
+				</tr>
+			</table>
+			<table class="table_content">			
+				<tr>
+					<td class="td_icon"><img src="images/portriat3.png" /></td>
+					<td><div class="td_white"><div class="white_angle"></div><p class="p_top">懒懒懒懒`姑娘<span></span>2015-3-31<span></span>11:10</p><p>宝宝接种疫苗后能洗澡么？在论坛上看到有的妈妈说，接种疫苗后不能给宝宝洗澡，昨天接种后专门问了下医生，医生说没事，怕的话不要让针眼接触水就好了，请问专家，接种后恩能够洗澡么？</p></div></td>	
+				</tr>
+			</table>
+			<table class="table_content">				
+				<tr>
+					<td><div class="td_pink"><div class="pink_angle"></div><p class="p_top">崔玉涛<span></span>2015-3-31<span></span>11:15</p><p>虽然不推荐预防接种当天给孩子洗澡，其实即使洗澡了也问题不大，只要不是长时间浸泡注射局部即可。预防接种后注射局部红肿是常见现象，用凉毛巾敷局部鲤鱼限制红肿状况。如果发现注射局部出现居右波动感的“软包”，应带孩子到医院检查。疫苗后出现的红肿于48消失开始逐渐吸收。</p></div></td>
+					<td class="td_icon"><img src="images/portriat2.png" /></td>	
+				</tr>
+			</table>
+			<table class="table_content" id="table_hide1" style="display:none;">			
+				<tr>
+					<td class="td_icon"><img src="images/portriat1.png" /></td>
+					<td><div class="td_white"><div class="white_angle"></div><p class="p_top">心聆<span></span>2015-3-31<span></span>11:00</p><p>这是一个隐藏的问题这是一个隐藏的问题这是一个隐藏的问题这是一个隐藏的问题这是一个隐藏的问题</p></div></td>	
+				</tr>
+			</table>	
+			<table class="table_content" id="table_hide2" style="display:none;">				
+				<tr>
+					<td><div class="td_pink"><div class="pink_angle"></div><p class="p_top">崔玉涛<span></span>2015-3-31<span></span>11:25</p><p>这是一个隐藏的回答这是一个隐藏的回答这是一个隐藏的回答这是一个隐藏的回答这是一个隐藏的回答</p></div></td>
+					<td class="td_icon"><img src="images/portriat2.png" /></td>	
+				</tr>
+			</table>
+		</div><!--table1-->	
+		<table class="table_content" id="table2" style="display:none;">
+			<tr>
+				<td class="td_icon"><img src="images/portriat1.png" /></td>
+				<td><div class="td_white"><div class="white_angle"></div><p class="p_top">心聆<span></span>2015-3-31<span></span>11:00</p><p>宝宝手背蚊子叮咬后有个大包，都肿起来了，怎么弄呀？</p></div></td>	
+			</tr>
+			<tr>
+				<td class="td_icon"><img src="images/portriat3.png" /></td>
+				<td><div class="td_white"><div class="white_angle"></div><p class="p_top">懒懒懒懒`姑娘<span></span>2015-3-31<span></span>11:10</p><p>宝宝接种疫苗后能洗澡么？在论坛上看到有的妈妈说，接种疫苗后不能给宝宝洗澡，昨天接种后专门问了下医生，医生说没事，怕的话不要让针眼接触水就好了，请问专家，接种后恩能够洗澡么？</p></div></td>	
+			</tr>
+		</table><!--table2-->
+		<table class="table_content" id="table3" style="display:none;">
+			<tr>
+				<td class="td_icon"><img src="images/portriat3.png" /></td>
+				<td><div class="td_white"><div class="white_angle"></div><p class="p_top">懒懒懒懒`姑娘<span></span>2015-3-31<span></span>11:10</p><p>宝宝接种疫苗后能洗澡么？在论坛上看到有的妈妈说，接种疫苗后不能给宝宝洗澡，昨天接种后专门问了下医生，医生说没事，怕的话不要让针眼接触水就好了，请问专家，接种后恩能够洗澡么？</p></div></td>	
+			</tr>
+		</table><!--table3-->
+		<button class="show_more" onclick="showMore();"><span class="hide_content" id="show_more">显示更多</span></button>
+	</div><!--main_middle-->
+	<div class="main_bottom">
+		<h3>相关推荐</h3>
+		<ul>
+			<li><a href="#">绝招一出 宝贝睡眠质量杠杠的</a></li>
+			<li><a href="#">6方法 让熊孩子爱上在早晨的例行活动</a></li>
+			<li><a href="#">拒绝小胖纸 积极预防少不了</a></li>
+		</ul>
+	</div><!--main_bottom-->
+	<div class="main_footer">
+		<div class="footer1"><a href="#">首页</a><span>|</span><a href="#">论坛</a><span>|</span><span class="a_middle"><a href="#">知识</a></span><span>|</span><a href="#">问答</a><span>|</span><a href="#">博客</a></div>
+		<div class="footer2"><a href="#">手机版</a><span>|</span><a href="#">电脑版</a></div>
+		<p class="footer3">2014育儿网 苏ICP备09013109</p>
+	</div><!--main_footer-->
+</body>
+</html>
